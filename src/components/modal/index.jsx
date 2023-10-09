@@ -1,58 +1,28 @@
+import Modal from "react-modal";
+import { useContext } from "react";
 import { HiOutlinePlusSm } from "react-icons/hi";
 import { useForm } from "react-hook-form";
 import { TodosContext } from "../../contexts/todos";
-import { useContext } from "react";
-import { v4 as uuidv4 } from "uuid";
-import "../../assets/css/todo.css";
-import { toast } from "react-toastify";
+import "../../assets/css/modal.css";
 
-export function Todo() {
+Modal.setAppElement("#root");
+
+export function ModalComponent() {
+  const { isOpen, handleModal, customStyles, handleEdit } =
+    useContext(TodosContext);
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm();
-
-  const { loading, setTodos } = useContext(TodosContext);
-
-  const handleSub = async (data) => {
-    const { title, description, dayConclusion } = data;
-    const todo = {
-      id: uuidv4(),
-      title: title,
-      dayConclusion: dayConclusion,
-      description: description,
-      start: dayConclusion,
-      done: false,
-    };
-
-    await fetch(import.meta.env.VITE_PUBLIC_API + "/todos", {
-      method: "POST",
-      body: JSON.stringify(todo),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    setTodos((prevState) => [...prevState, todo]);
-    toast.success("Item adicionado a sua lista de tarefas!", {
-      position: toast.POSITION.BOTTOM_LEFT,
-    });
-    reset();
-  };
-
-  if (loading) {
-    return <h2>Carregando...</h2>;
-  }
   return (
-    <main className="containerApp">
-      <div className="container-todo">
-        <div className="todo-header">
-          <h1>Criar Tarefa</h1>
+    <Modal isOpen={isOpen} onRequestClose={handleModal} style={customStyles}>
+      <div className="container">
+        <div className="modal-header">
+          <h1>Editar Tarefa</h1>
         </div>
         <div className="form-todo">
-          <form onSubmit={handleSubmit(handleSub)}>
+          <form onSubmit={handleSubmit(handleEdit)}>
             <div className="form-control">
               <label htmlFor="title">O que você vai fazer?</label>
               <input
@@ -103,12 +73,12 @@ export function Todo() {
               )}
             </div>
             <button id="button" type="submit">
-              Adicionar
+              Atualizar
               <HiOutlinePlusSm id="button-icon" />
             </button>
           </form>
         </div>
       </div>
-    </main>
+    </Modal>
   );
 }

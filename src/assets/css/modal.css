@@ -1,23 +1,15 @@
-.container-todo {
-  width: 40vw;
-  margin: 10em auto;
-  background-color: rgb(97, 119, 248);
-  border-radius: 10px;
-  color: #fff;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+.container{
+  color:#fff;
 }
-
-.todo-header {
+.modal-header {
   padding: 1rem;
   border-bottom: 1px solid rgb(255, 255, 255);
   text-align: center;
 }
 
-.todo-header h1 {
+.modal-header h1 {
   font-size: 1.5rem;
   margin: 0;
-  font-weight: 500;
   text-shadow: #000 0.7px 0.7px 1px;
 }
 .form-todo {
@@ -38,14 +30,15 @@
 }
 
 .form-control label {
+  font-weight: bold;
   font-size: 1rem;
   margin-bottom: 0.4em;
-  text-shadow: #000 0.4px 0.4px 1px;
+  text-shadow: #000 0.7px 0.7px 1px;
 }
 
 .form-control input {
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: rgb(255, 255, 255);
   padding-left: 0.5em;
   color: rgb(4, 4, 4);
@@ -56,7 +49,7 @@
 }
 .form-control textarea {
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: rgb(255, 255, 255);
   padding-left: 0.5em;
   color: rgb(4, 4, 4);

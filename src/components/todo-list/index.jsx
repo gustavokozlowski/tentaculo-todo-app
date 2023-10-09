@@ -1,18 +1,11 @@
-import {
-  BsTrash,
-  BsBookmarkCheck,
-  BsBookmarkCheckFill,
-  BsPencil,
-  BsFillClockFill,
-  BsFillGeoFill,
-} from "react-icons/bs";
 import { FcOk } from "react-icons/fc";
 import { TodosContext } from "../../contexts/todos";
 import { useContext } from "react";
 import "../../assets/css/todo-list.css";
+import { Card } from "../card";
 
 export function TodoList() {
-  const { todos, handleEdit, handleDelete } = useContext(TodosContext);
+  const { todos } = useContext(TodosContext);
 
   return (
     <main>
@@ -28,36 +21,10 @@ export function TodoList() {
               <FcOk id="check" />{" "}
             </div>
           )}
-          {todos.map((todo) => (
-            <div className="todo" key={todo.id}>
-              <div className="title-todo">
-                <div className="todo-day">
-                  <div className="icon">
-                    <BsFillClockFill />
-                  </div>
-                  {todo.dayConclusion}
-                </div>
-                <span onClick={() => handleEdit(todo)}>
-                  {!todo.done ? (
-                    <BsBookmarkCheck id="undone" />
-                  ) : (
-                    <BsBookmarkCheckFill id="done" />
-                  )}
-                </span>
-              </div>
-              <h3 className={todo.done ? "todo-done" : ""}>{todo.title}</h3>
-
-              {todo.description && (
-                <p className="todo-description">
-                  descrição: {todo.description}{" "}
-                </p>
-              )}
-              <div className="actions">
-                <BsPencil id="edit" onClick={() => handleDelete(todo.id)} />
-                <BsTrash id="trash" onClick={() => handleDelete(todo.id)} />
-              </div>
-            </div>
-          ))}
+          {todos &&
+            todos.map((todo, index) => {
+              return <Card key={index} todo={todo} />;
+            })}
         </div>
       </div>
     </main>
