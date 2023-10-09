@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { TodosContext } from "../../contexts/todos";
 import { useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
+import "../../assets/css/todo.css";
 
 export function Todo() {
   const {
@@ -10,7 +11,7 @@ export function Todo() {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm({});
+  } = useForm();
 
   const { loading, setTodos } = useContext(TodosContext);
 
@@ -40,13 +41,14 @@ export function Todo() {
     reset();
   };
 
+  console.log(errors);
   if (loading) {
     return <h2>Carregando...</h2>;
   }
   return (
     <>
       <div className="containerApp">
-        <div className="App">
+        <div className="container-todo">
           <div className="todo-header">
             <h1>Criar Tarefa</h1>
           </div>
@@ -57,26 +59,49 @@ export function Todo() {
                 <input
                   id="title"
                   placeholder="Título da tarefa"
-                  {...register("title", { required: true })}
+                  {...register("title", {
+                    required: {
+                      message: "Insira um título",
+                      value: true,
+                    },
+                  })}
                 />
+                {errors.title && (
+                  <span className="error-message">{errors.title.message}</span>
+                )}
               </div>
               <div className="form-control">
                 <label htmlFor="dayConclusion">Data de conclusão:</label>
                 <input
                   id="dayConclusion"
                   type="date"
-                  {...register("dayConclusion", { required: true })}
+                  {...register("dayConclusion", {
+                    required: {
+                      message: "Insira uma data válida",
+                      value: true,
+                    },
+                  })}
                 />
+                {errors.dayConclusion && (
+                  <span className="error-message">
+                    {errors.dayConclusion.message}
+                  </span>
+                )}
               </div>
               <div className="form-control">
-                <label htmlFor="description">Descrição:</label>
+                <label htmlFor="description">Descrição(opcional):</label>
                 <textarea
-                  rows="10"
+                  rows="6"
                   maxLength="500"
                   id="description"
                   placeholder="Descreva com mais detalhes..."
-                  {...register("description", { required: true })}
+                  {...register("description")}
                 />
+                {errors.description && (
+                  <span className="error-message">
+                    {errors?.description?.message}
+                  </span>
+                )}
               </div>
               <button id="button" type="submit">
                 Adicionar

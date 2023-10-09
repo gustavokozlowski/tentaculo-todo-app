@@ -1,0 +1,39 @@
+.container-header {
+    background-color: rgb(97, 119, 248);
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+   
+  }
+  .content-header {
+    text-align: end;
+    width: 90%;
+    box-sizing: border-box;
+    flex-direction: row;
+    display: flex;
+  }
+  .container-navbar {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 90%;
+  }
+  .content-navbar {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    gap: 2.5rem;
+    color: #fff;
+  }
+  .link-navbar {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: #000 0.7px 0.7px 1px;
+    font-size: 1.25rem;
+  }
+  

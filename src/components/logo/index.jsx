@@ -1,3 +1,5 @@
+import "../../assets/css/logo.css";
+
 export function Logo() {
   return (
     <div className="logo">

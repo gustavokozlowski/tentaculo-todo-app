@@ -1,0 +1,85 @@
+.container-todo {
+    width: 40vw;
+    margin: 6em auto;
+    background-color: rgb(97, 119, 248);
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 1px 1px 5px 2px rgb(67, 67, 67), 1px 1px 5px 2px rgb(86, 81, 81);
+  }
+  .form-todo {
+    padding: 1em;
+    margin: 0 2em;
+  }
+  
+  .form-todo h2,
+  .list-todo h2 {
+    text-align: center;
+    margin-top: 0;
+    text-shadow: #000 0.7px 0.7px 1px;
+  }
+  
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+   
+  }
+  
+  .form-control label {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.4em;
+    text-shadow: #000 0.7px 0.7px 1px;
+  }
+  
+  .form-control input {
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 0.5em;
+    color: rgb(4, 4, 4);
+    outline: none;
+    font-size: 1rem;
+    height: 2rem;
+    font-weight: 500;
+  }
+  .form-control textarea {
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 0.5em;
+    color: rgb(4, 4, 4);
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  #button {
+    background-color: rgb(255, 255, 255);
+    color: #eee;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 1em;
+    cursor: pointer;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 1rem;
+    text-shadow: #fff 2px 2px 2px;
+  }
+  #button-icon {
+    font-size: 1rem;
+  }
+
+  .error-message{
+    display:flex;
+    font-size: 1rem;
+    height: 3.5vh;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    align-items: center;
+    background-color:#f33f;
+    margin-top: 0.2rem;
+  }
+  
