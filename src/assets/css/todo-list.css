@@ -7,13 +7,13 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .todo-list-header {
-
   border-bottom: 1px solid rgb(255, 255, 255);
   text-align: center;
 }
 
 .todo-list-header h1 {
   font-size: 1.5rem;
+  font-weight: 500;
   text-shadow: #000 0.7px 0.7px 1px;
 }
 .list-todo {
@@ -48,8 +48,8 @@
 }
 
 .todo {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   background-color: rgb(255, 255, 255);
   border-radius: 6px;
@@ -60,7 +60,7 @@
 }
 
 .todo h3 {
-  color: rgb(97, 119, 248);
+  color: rgb(0, 0, 0);
 }
 
 .todo-done {
@@ -70,8 +70,10 @@
 
 .todo-day {
   font-style: italic;
-  font-size: 0.65rem;
-  color: rgb(0, 0, 0);
+  font-size: 0.7rem;
+  color: #b9b4c7;
+  display:flex;
+  gap: 0.2rem;
 }
 .todo-description {
   font-style: italic;
@@ -83,7 +85,11 @@
   font-size: 1.2em;
   cursor: pointer;
   transition: 0.3s;
-  color: rgb(0, 0, 0);
+  color: #b9b4c7;
+}
+
+.icon{
+  font-size: 0.6rem;
 }
 
 .title-todo {

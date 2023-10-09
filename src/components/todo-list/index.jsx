@@ -31,7 +31,12 @@ export function TodoList() {
           {todos.map((todo) => (
             <div className="todo" key={todo.id}>
               <div className="title-todo">
-                <p className="todo-day">{todo.dayConclusion} </p>
+                <div className="todo-day">
+                  <div className="icon">
+                    <BsFillClockFill />
+                  </div>
+                  {todo.dayConclusion}
+                </div>
                 <span onClick={() => handleEdit(todo)}>
                   {!todo.done ? (
                     <BsBookmarkCheck id="undone" />
