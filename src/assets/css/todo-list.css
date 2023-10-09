@@ -1,11 +1,21 @@
 .container-todo-list {
   width: 40vw;
   background-color: rgb(97, 119, 248);
-  border-radius: 5px;
+  border-radius: 10px;
+  margin: 10em auto;
   color: #fff;
-  box-shadow: 1px 1px 5px 2px rgb(67, 67, 67), 1px 1px 5px 2px rgb(86, 81, 81);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.todo-list-header {
+
+  border-bottom: 1px solid rgb(255, 255, 255);
+  text-align: center;
 }
 
+.todo-list-header h1 {
+  font-size: 1.5rem;
+  text-shadow: #000 0.7px 0.7px 1px;
+}
 .list-todo {
   padding: 0 1em 2em;
   margin: 1em 2em;
@@ -34,15 +44,12 @@
 .list-todo {
   flex-direction: column;
   display: flex;
-  gap: 1rem;
-}
-
-.list-todo p {
-  text-align: center;
+  gap: 1.5rem;
 }
 
 .todo {
-  border: 1px solid rgb(0, 0, 0);
+  display:flex;
+  flex-direction:column;
   padding: 1rem;
   background-color: rgb(255, 255, 255);
   border-radius: 6px;
@@ -53,8 +60,7 @@
 }
 
 .todo h3 {
-  margin-bottom: 0.5em;
-  color: rgb(0, 0, 0);
+  color: rgb(97, 119, 248);
 }
 
 .todo-done {
@@ -62,20 +68,36 @@
   color: rgb(255, 0, 0);
 }
 
-.todo p {
-  text-align: left;
+.todo-day {
+  font-style: italic;
+  font-size: 0.65rem;
+  color: rgb(0, 0, 0);
+}
+.todo-description {
   font-style: italic;
   font-size: 0.8rem;
-  margin-bottom: 1.5em;
   color: rgb(0, 0, 0);
 }
 
 .todo svg {
   font-size: 1.2em;
   cursor: pointer;
-  margin-right: 1em;
-  transition: 0.5s;
+  transition: 0.3s;
   color: rgb(0, 0, 0);
+}
+
+.title-todo {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actions {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 #done {
@@ -86,4 +108,10 @@
 }
 #trash:hover {
   color: rgb(255, 0, 0);
+}
+#edit {
+  align-self: end;
+}
+#edit:hover {
+  color: rgb(204, 204, 0);
 }

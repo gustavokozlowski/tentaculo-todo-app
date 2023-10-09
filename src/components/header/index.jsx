@@ -1,9 +1,11 @@
 import { Logo } from "../logo";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "../../assets/css/header.css";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const navlinks = [
+    { title: "home", to: "/home" },
     { title: "tarefas", to: "/todo-list" },
     { title: "calendário", to: "/calendar" },
   ];
@@ -16,6 +18,7 @@ export function Header() {
             {navlinks.map((navlink, index) => (
                 <Link
                 key={index}
+                smooth
                 to={`${import.meta.env.VITE_PUBLIC_URL + navlink.to}`}
                 className="link-navbar"
                 >

@@ -12,16 +12,16 @@ export function Calendar() {
       <FullCalendar
         locale={ptBr}
         headerToolbar={{
-          start: "today prev,next", // will normally be on the left. if RTL, will be on the right
+          start: "today", 
           center: "title",
-          end: "dayGridMonth", // will normally be on the right. if RTL, will be on the left
+          end: "prev,next,dayGridMonth",
         }}
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"
         height="50vh"
         events={todos}
       />
-      {/* ADICIONE OS DIAS DAS TASKS COM UM MAP */}
+    
     </main>
   );
 }
