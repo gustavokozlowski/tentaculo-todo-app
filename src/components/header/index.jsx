@@ -1,13 +1,13 @@
 import { Logo } from "../logo";
-import "../../assets/css/header.css";
 import { Link } from "react-router-dom";
+import "../../assets/css/header.css";
 
+const navlinks = [
+  { title: "home", to: "/home" },
+  { title: "lista", to: "/todo-list" },
+  { title: "calendário", to: "/calendar" },
+];
 export function Header() {
-  const navlinks = [
-    { title: "home", to: "/home" },
-    { title: "tarefas", to: "/todo-list" },
-    { title: "calendário", to: "/calendar" },
-  ];
   return (
     <header className="container-header">
       <div className="content-header">
