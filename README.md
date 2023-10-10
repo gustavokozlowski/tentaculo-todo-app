@@ -6,12 +6,7 @@ O desafio consiste em desenvolver um TodoApp em React que possibilite ao usuári
 
 ### Demo video:
 
-
-
-
 https://github.com/gustavokozlowski/tentaculo-todo-app/assets/94485093/628f7212-0941-4360-b1b6-5fdafa897607
-
-
 
 ### Tecnologias utilizadas neste projeto:
 
@@ -27,7 +22,7 @@ React
         json-server.
 ```
 
-### 🔧 Comando para a instalação & uso:
+### Comando para a instalação & uso:
 
 ````
 
