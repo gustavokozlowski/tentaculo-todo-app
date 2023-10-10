@@ -54,11 +54,11 @@ export const TodosProvider = ({ children }) => {
       );
       setTodos((prevState) =>
         prevState.map((t) => (t.id === data.id ? (t = data) : t))
-        );
-        toast.info("O status da sua tarefa foi alterado", {
-          position: toast.POSITION.BOTTOM_LEFT,
-          autoClose: 3000,
-        });
+      );
+      toast.info("O status da sua tarefa foi alterado", {
+        position: toast.POSITION.BOTTOM_LEFT,
+        autoClose: 3000,
+      });
     } catch (error) {
       console.error("Error fetching:", error);
     }
@@ -100,7 +100,7 @@ export const TodosProvider = ({ children }) => {
     } catch (error) {
       console.error("Error fetching:", error);
     }
-  }, []);
+  }, [setTodos]);
 
   return (
     <TodosContext.Provider
@@ -119,6 +119,7 @@ export const TodosProvider = ({ children }) => {
       }}
     >
       {children}
+    
     </TodosContext.Provider>
   );
 };
