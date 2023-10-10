@@ -7,10 +7,15 @@ O desafio consiste em desenvolver um TodoApp em React que possibilite ao usuári
 ### Tecnologias utilizadas neste projeto:
 
 ```
-
-React, ContextApi, fetch, react-router-dom, react-toastify, react-icons, react-modal, react-hook-form, json-server.
-
-
+React
+ ContextApi
+  fetch
+   react-router-dom
+    react-toastify
+     react-icons
+      react-modal
+       react-hook-form
+        json-server.
 ```
 
 ### 🔧 Comando para a instalação & uso:
