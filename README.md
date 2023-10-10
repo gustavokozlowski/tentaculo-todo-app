@@ -1,8 +1,13 @@
-# TodoApp:
+## TodoApp:
 
 ### Breve resumo:
 
 O desafio consiste em desenvolver um TodoApp em React que possibilite ao usuário ver todas as tarefas registradas, adicionar novas tarefas, editar e excluir( basicamente um CRUD ). Além de exibir as tarefas em uma lista, o usuário ainda conta com o modo de exibição das tarefas num calendário. No qual, as tarefas são exibidas como eventos de acordo com as suas respectivas datas.
+
+### Demo video:
+
+
+
 
 ### Tecnologias utilizadas neste projeto:
 
